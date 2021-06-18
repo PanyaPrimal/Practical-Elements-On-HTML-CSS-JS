@@ -15,8 +15,8 @@ $(document).ready(function() {
 		return false;
 	});
 
-	$.each(s('.radiobuttons__item'), function(index, val){
-		if($(this).find('input').proop('checked')==true){
+	$.each($('.radiobuttons__item'), function(index, val) {
+		if($(this).find('input').prop('checked')==true){
 			$(this).addClass('active');
 		}
 	});
