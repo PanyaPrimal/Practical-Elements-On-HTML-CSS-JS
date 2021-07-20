@@ -56,9 +56,32 @@ body{
 	z-index: 2;
 }
 
-content {}
-.content__body {}
-.content__header {}
-.content__title {}
-.content__subtitle {}
-.
+.content {
+	position: relative;
+}
+.content__body {
+	max-width: 1170px;
+	margin: 0px auto;
+}
+.content__header {
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	padding: 0px 20px;
+}
+.content__title {
+	font-size: 200px;
+}
+.content__subtitle {
+	font-size: 120px;
+}
+.content__article {
+	background-color: rgba(255,255,255,0.5);
+	padding: 25px;
+	font-size: 18px;
+	line-height: 24px;
+}
+.content__article p {
+	margin-bottom: 20px;
+}
+
