@@ -85,3 +85,27 @@ body{
 	margin-bottom: 20px;
 }
 
+@media (max-width:1250px){
+	.content__title{
+		font-size: 130px;
+	}
+	.content__subtitle{
+		font-size: 70px;
+	}
+}
+@media (max-width:767px){
+	.content__title{
+		font-size: 50px;
+	}
+	.content__subtitle{
+		font-size: 30px;
+	}
+	.content__article{
+		font-size: 14px;
+		line-height: 20px;
+	}
+	.content__article p{
+		margin: 0px 0px 10px 0px;
+	}
+}
+
