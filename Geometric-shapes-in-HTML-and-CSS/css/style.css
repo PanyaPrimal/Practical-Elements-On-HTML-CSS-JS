@@ -8,6 +8,79 @@ html,body{
 	height: 100%;
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
-.wrapper{
-	
+
+.block {
+	padding: 50px;
+	min-width: 1170px;
+	margin: 0px auto;
+ }
+.block__item { 
+	margin: 0px 0px 30px 0px;
 }
+
+
+.square { 
+	width: 150px;
+	height: 150px;
+	background-color: green;
+}
+.rectangle {
+	width: 300px;
+	height: 150px;
+	background-color: green;
+ }
+.circle {
+	width: 150px;
+	height: 150px;
+	background-color: green;
+	border-radius: 50%;
+ }
+.oval { 
+	width: 300px;
+	height: 150px;
+	background-color: green;
+	border-radius: 50%;
+}
+.triangle-up { 
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid green;
+}
+.triangle-up:hover {
+	border-bottom: 100px solid red;
+}
+.triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 100px solid green;
+ }
+.triangle-left {	
+	width: 0;
+	height: 0;
+	border-bottom: 50px solid transparent;
+	border-right: 100px solid green;
+	border-top: 50px solid transparent; 
+}
+.triangle-right {
+	width: 0;
+	height: 0;
+	border-bottom: 50px solid transparent;
+	border-left: 100px solid green;
+	border-top: 50px solid transparent; 
+ }
+.parallelogram { 
+	width: 150px;
+	height: 100px;
+	background-color: green;
+	transform: skew(20deg);
+}
+.trapezoid {
+	width: 200px;
+	border-bottom: 100px solid green;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+ }
