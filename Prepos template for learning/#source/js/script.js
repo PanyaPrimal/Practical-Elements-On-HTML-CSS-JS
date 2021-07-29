@@ -15,7 +15,6 @@ class Twitter {
 
         console.log('this.tweets: ', this.tweets);
     }
-
     renderPost() {
 
     }
