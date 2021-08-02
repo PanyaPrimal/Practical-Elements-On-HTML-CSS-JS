@@ -8,6 +8,39 @@ html,body{
 	height: 100%;
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
-.wrapper{
-	
+
+.container { 	
+	max-width: 1180px;
+	margin: 0px auto;
+	padding: 0px 10px;
 }
+
+.header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+ }
+
+ .header:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	widows: 100%;
+	height: 100%;
+	background-color: #5e5373;
+}
+
+.header__body { 
+	position: relative;
+	z-index: 2;
+}
+.header__logo { }
+.header__burger { }
+.header__menu { }
+.header__list { }
+.header__link { }
+.content { }
+.content__text { }
