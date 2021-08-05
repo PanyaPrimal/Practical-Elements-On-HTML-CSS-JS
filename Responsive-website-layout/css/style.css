@@ -30,6 +30,27 @@ body{
 	padding: 0px 15px;
  }
 
+
+@media (max-width:1200px){
+	.container{
+		max-width: 970px;
+	}
+}
+@media (max-width:992px){
+	.container{
+		max-width: 750px;
+	}
+}
+@media (max-width:767px){
+	.container{
+		max-width: none;
+	}
+}
+@media (max-width:420px){
+	
+}
+
+
  .header {
 	background-color: #5e5373;
 }
@@ -52,6 +73,56 @@ body{
 .menu { }
 .menu__icon { }
 .icon-menu { }
+
+@media (max-width:767px){
+	.menu__body {display: none;}
+	.icon-menu {
+		display: block;
+		position: relative;
+		width: 40px;
+		height: 25px;
+		position: relative;
+		z-index: 3;
+	}
+	.icon-menu span{
+		background-color: #ece89d;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 3px;
+		top: 11px;
+	}
+	.icon-menu:before,
+	.icon-menu:after{
+		content: '';
+		background-color: #ece89d;
+		position: absolute;
+		width: 100%;
+		height: 3px;
+		left: 0;
+		transition: all 0.3s ease 0s;
+	}
+	.icon-menu:before{
+		top: 0;
+	}
+	.icon-menu:after{
+		bottom: 0;
+	}
+
+	.icon-menu.active span{
+		transform: scale(0);
+	}
+
+	.icon-menu.active:before{
+		transform:rotate(45deg);
+		top: 9px;
+	}
+	.icon-menu.active:after{
+		transform:rotate(-45deg);
+		bottom: 9px;
+	}
+}
+
 .menu__body { }
 .menu__list { 
 	display: flex;
@@ -74,9 +145,27 @@ body{
 	font-size: 50px;
 	margin: 0px 0px 40px 0px;
 }
+@media (max-width:992px){
+	.three-block__title {
+		font-size: 40px;
+		margin: 0px 0px 30px 0px;
+	}
+}
+@media (max-width:767px){
+	.three-block__title {
+		font-size: 30px;
+		margin: 0px 0px 15px 0px;
+	}
+}
+
 .three-block__row { 
 	display: flex;
 	margin: 0px -15px;
+}
+@media (max-width:767px){
+	.three-block__row{
+		flex-wrap: wrap;
+	}
 }
 .three-block__column { 
 	flex: 0 1 100%;
@@ -101,10 +190,21 @@ body{
 	display: flex;
 	margin: 0px -15px;
 }
+@media (max-width:767px){
+	.two-block__row {
+		display: block;
+		flex-wrap: wrap;
+	}
+}
 .two-block__column { 
 	flex: 0 1 50%;
 	padding: 0px 15px;
 	margin: 0px 0px 15px 0px;
+}
+@media (min-width:767px){
+	.three-block__column {
+		flex: 0 1 33.333%;
+	}
 }
 .two-block__item { 
 	background-color: #18b5a4;
