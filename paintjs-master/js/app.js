@@ -21,6 +21,8 @@ class App {
             .addEventListener('click', this.handleCanvasClear.bind(this));
         document.querySelector('#brush-size-slider')
             .addEventListener('change', this.handleBrushSizeChange.bind(this));
+        document.querySelector('#new-color-button')
+            .addEventListener('click', this.handleNewColorButton.bind(this));
     }
 
 
@@ -55,6 +57,10 @@ class App {
 
     handleBrushSizeChange(event) {
         this.context.lineWidth = Number(event.target.value);
+    }
+
+    handleNewColorButton(event){
+        this.colorPicker.open();
     }
 
 }   
