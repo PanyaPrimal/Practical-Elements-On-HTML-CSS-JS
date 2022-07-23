@@ -13,11 +13,7 @@ class ColorPalette {
         this.element.addEventListener('click', this.handColorSelected.bind(this));
 
         for (let color of this.colors) {
-            let li = document.createElement('li');
-            li.className = 'color-palette__color';
-            li.style.backgroundColor = `rgb(${color.red},${color.green},${color.blue})`;
-            this.element.appendChild(li);
-            this.colorElements.push(li);
+            this.addColorElement(color);
         }
     }
     handColorSelected({target}) {
@@ -33,6 +29,14 @@ class ColorPalette {
     }
 
     addColor(color) {
-        console.log(color);
+        this.addColorElement(color);
+    }
+    
+    addColorElement(color) {
+        let li = document.createElement('li');
+        li.className = 'color-palette__color';
+        li.style.backgroundColor = `rgb(${color.red},${color.green},${color.blue})`;
+        this.element.appendChild(li);
+        this.colorElements.push(li);
     }
 }
