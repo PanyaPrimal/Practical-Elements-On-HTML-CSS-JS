@@ -4,10 +4,8 @@ class App {
         this.canvas = canvas;
         this.colorPalette = colorPalette;
         this.colorPicker = colorPicker;
-
         this.context = null;
         this.isDrawing = false;
-
         this.init();
     }
 
@@ -31,6 +29,7 @@ class App {
             this.context.beginPath();
             this.context.moveTo(this.lastEvent.offsetX, this.lastEvent.offsetY);
             this.context.lineTo(event.offsetX, event.offsetY);
+            this.context.strokeStyle = this.colorPalette.currentColor;
             this.context.stroke();
             this.lastEvent = event;
         }
