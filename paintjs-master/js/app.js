@@ -17,6 +17,8 @@ class App {
         this.canvas.addEventListener('mouseup', this.handleCancasMouseup.bind(this));
         this.canvas.addEventListener('mouseleave', this.handleCancasMouseleave.bind(this));
 
+        this.colorPicker.onAdd = color => this.colorPalette.addColor(color)
+
         document.querySelector('#clear-canvas-button')
             .addEventListener('click', this.handleCanvasClear.bind(this));
         document.querySelector('#brush-size-slider')

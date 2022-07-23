@@ -31,4 +31,8 @@ class ColorPalette {
             target.classList.add('selected')
         }
     }
+
+    addColor(color) {
+        console.log(color);
+    }
 }

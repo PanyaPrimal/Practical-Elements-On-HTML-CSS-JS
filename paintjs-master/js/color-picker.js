@@ -9,6 +9,8 @@ class ColorPicker {
             blue: 0
         };
 
+        this.onAdd = () => {};
+
         this.init();
     }
 
@@ -19,6 +21,21 @@ class ColorPicker {
         this.element.querySelectorAll('.color-picker__slider')
             .forEach(slider => slider.addEventListener('change', this.handleChange.bind(this)));
         
+        this.element.querySelector('.color-picker__add-button')
+            .addEventListener('click', this.handleAdd.bind(this));
+
+        this.element.querySelector('.color-picker__close-button')
+            .addEventListener('click', this.close.bind(this));
+    }
+
+    handleAdd() {
+        this.onAdd(this.color);
+        this.reset();
+        this.close();
+    }
+
+    handleClose() {
+        this.close();
     }
 
     handleChange(event) {
@@ -29,6 +46,14 @@ class ColorPicker {
  
     setPreviewBackground(color) {
         this.previewElement.style.backgroundColor = `rgb(${color.red},${color.green},${color.blue})`;
+    }
+
+    reset() {
+        this.color = {
+            red: 0,
+            green: 0,
+            blue: 0
+        };
     }
 
     open() {
