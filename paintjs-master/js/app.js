@@ -19,6 +19,8 @@ class App {
 
         document.querySelector('#clear-canvas-button')
             .addEventListener('click', this.handleCanvasClear.bind(this));
+        document.querySelector('#brush-size-slider')
+            .addEventListener('change', this.handleBrushSizeChange.bind(this));
     }
 
 
@@ -49,6 +51,10 @@ class App {
     handleCanvasClear(event) {
         this.context.fillStyle = 'white';
         this.context.fillRect(0, 0, this.canvas.width, this.canvas.height);
+    }
+
+    handleBrushSizeChange(event) {
+        this.context.lineWidth = Number(event.target.value);
     }
 
 }   
