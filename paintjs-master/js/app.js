@@ -16,6 +16,9 @@ class App {
         this.canvas.addEventListener('mousemove', this.handleCancasMousemove.bind(this));
         this.canvas.addEventListener('mouseup', this.handleCancasMouseup.bind(this));
         this.canvas.addEventListener('mouseleave', this.handleCancasMouseleave.bind(this));
+
+        document.querySelector('#clear-canvas-button')
+            .addEventListener('click', this.handleCanvasClear.bind(this));
     }
 
 
@@ -43,4 +46,9 @@ class App {
         this.isDrawing = false;
     }
 
-}
+    handleCanvasClear(event) {
+        this.context.fillStyle = 'white';
+        this.context.fillRect(0, 0, this.canvas.width, this.canvas.height);
+    }
+
+}   
